@@ -1,0 +1,157 @@
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    /* mi tamaño estandar de header */
+    width: 100%;
+    background: #5c3c10;
+    color: #fff;
+    height: 13%;
+    /* menu estatico */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    
+}
+#myCarousel
+{
+    height: 100%;
+}
+.contenedor {
+    width: 97%;
+    margin: auto;
+} 
+.titulo :hover{
+    cursor: pointer;
+    color: black;
+   
+}
+.titulo a
+{
+    color: #fff;
+    
+}
+
+
+
+h1 {
+    float: left;
+    
+}
+
+
+header .contenedor {
+    display: table;
+}
+
+
+section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#Bienvenidos {
+    text-justify: distribute;
+    text-align: center;
+    background-color: #a27a2fef;
+    color: #f7ca44;
+    text-shadow: rgb(0, 0, 0) 1cm;
+    border: solid;
+    border-color: black;
+}
+#Bienvenidos p{
+    color: #d5eeff;
+    
+}
+
+footer{
+    background-color: #fff;
+    
+}
+footer a {
+    color: black;
+}
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.copy {
+    font-size: 20px;
+}
+
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.sociales a {
+    color: #333;
+    text-decoration: none;
+}
+.icon-googleplus-rect:hover{
+    color: red;
+}
+.icon-instagram:hover{
+    color: brown;
+}
+.icon-facebook-squared:hover{
+    color: blue;
+}
+.icon-list:hover{
+    color: bisque;
+}
+
+@media (min-width:768px) { 
+    .sociales {
+        width: auto;
+    }
+    
+    footer .contenedor {
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width:1024px) {
+    .contenedor {
+        width: 1000px;
+    }
+    #info{
+        font-size: 18px;
+    }
+    #Bienvenidos{
+        font-size: 18px;
+    }
+}
+
+main{
+    background-image: url(https://media.istockphoto.com/vectors/dog-isolated-french-bulldog-seamless-pattern-bone-paw-vector-breed-vector-id915559600);
+    margin: 0;
+    background-size: 100vw;
+    background-attachment: fixed;
+    
+    
+}
+
+
+
+
+

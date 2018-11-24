@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Aqui van los Metadatos (Datos que no se muestran en Pantalla)-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Descripcion de nuestra Pagina Web">
+    <title>Mis Perris</title>
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="icon" href="{% static 'img/doushouqi-dog.png' %}"/>
+    <link rel="stylesheet" href="{% static 'style/fontello.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style/carrousel.css' %}">
+    <link rel="stylesheet" href="{% static 'style/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'style/banner.css' %}">
+    <link rel="stylesheet" href="{% static 'style/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'style/info.css' %}">
+    <link rel="stylesheet" href="{% static 'style/formulario_p.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome|typicons">
+    
+</head>
+<body>
+    <header>
+        
+        <div class="contenedor">
+            <article class="titulo"><a href="{% url 'index' %}"><h1 class="icon-guidedog"> Mis Perris 
+            </h1></a></article>
+            <input type="checkbox" id="menu-bar"> 
+            <label class="icon-list" for="menu-bar"> </label>
+            <nav class="menu">
+                <a href="{% url 'index' %}">Inicio</a>
+                <a href="{% url 'galeria' %}">Inscripción</a>
+                <a href="">Blog</a>
+                <a href="">Contacto</a>
+            </nav>
+
+        </div>
+            
+    </header>
+
+    <main>
+
+        <section id="Formulario_p">
+        <div class="contenedor">
+            <div class="cont_form">
+                 <h1 class="formulario__titulo">Contáctenos</h1>
+		<br/>
+            
+                <article class="datos_form">
+		  <form onSubmit="validate()" action="#">
+            <h3>Nombre:</h3>
+            <label class="formulario__label" for="txtName"></label>
+			<input class="formulario__input" type="text" maxlength="40" minlength="2" id="txtName"
+            placeholder="Ingrese sus dos nombres" required onkeypress="return sololetras(event)"/>
+            <span id="nameValidator" style="color:red"></span>
+            <br/>
+              <h3>Rut:</h3>
+            <label class="formulario__label" for="txtRut"></label>
+			<input type="text" id="rut" class="formulario__input" name="rut" required oninput="checkRut(this)" placeholder="Ingrese RUT">
+              <br/>
+            <h3>Email:</h3>
+            <label class="formulario__label" for="frmEmailC"></label>
+            <input class="formulario__input" type="email" name="emailC" id="txtEmail"
+            placeholder="nombre@ejemplo.com" required autocomplete="email">
+            <br/>
+
+			<h3>Telefono de contacto:</h3>
+			<label class="formulario__label" for="txtFono"></label>
+			<input class="formulario__input" type="tel" id="txtFono" 
+			placeholder="ingrese Telefono Ej:999999999" required pattern="[0-9]{9}"/>
+			<br />
+            <h3>Fecha De Nacimiento:</h3>
+			<label  class="formulario__label" for="txtDate"></label>
+			<input class="formulario__input" type="date" id="txtDate" required
+				max="2000-12-31" min="1910-01-01" />
+			<br />
+            <h3 for="sltOptions">Tipo vivienda:</h3>
+            <label class="formulario__label" for="sltOptions"></label>
+			<select class="formulario__input" id="sltOptions" required>
+
+                <option value="">Elige una opción</option>   
+                <option>Departamento</option>
+                <option>Casa sin patio</option>
+                <option>Casa con patio grande</option>
+                <option>Casa con patio pequeño</option>
+                   
+			</select>
+            <br />
+            
+              <h3 for="txtRegion">Region:</h3>
+            <label class="formulario__label"  for="txtRegion">Region</label>
+            <select id="txtRegion" oninput="selectCity()" class="formulario__input" required>  
+            </select>
+            <br />
+            <h3 for="txtCity">Ciudad:</h3>
+            <label class="formulario__label"  for="txtCity">Ciudad</label>
+            <select id="txtCity" class="formulario__input" required> 
+            </select>
+			<button class="formulario__submit">Inscribirse</button>
+        </form>
+                    </article>
+                </div>
+        </div>
+    </section>
+
+     
+    </main>
+    <footer>
+
+        <div class="contenedor">
+            <table><div class="sociales">
+
+                <a class="icon-facebook-squared"href="https://www.facebook.com/"></a>
+                <a class="icon-twitter-1" href="https://twitter.com/?lang=es"></a>
+                <a class="icon-instagram" href="https://www.instagram.com/?hl=es-la"></a>
+                <a class="icon-googleplus-rect" href="https://plus.google.com/discover?hl=es"></a>
+                    
+                </div>
+                <div>
+                        <tr>
+                            <td>Teléfono Contacto:</td>
+                             <td>
+            
+                                <!-- Hipervínculo con llamada -->
+                                <a href="tel:+56988888888">
+                                    +56 9 8 888 88 88
+                                </a>
+            
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td>Mail:</td>
+                            <td>
+            
+                                <a href="mailto:Alexis@alumnos.duoc.cl">
+                                    Alexis@alumnos.duoc.cl
+                                </a>
+            
+                            </td>
+                        </tr>
+                </div>
+                <p class="copy">Mis perris &copy; 2018</p>
+                
+            </table>
+        
+            
+               
+        </div>
+           
+    </footer>
+    <script src="/static/js/formulario.js"></script>
+</body>    
+</html>

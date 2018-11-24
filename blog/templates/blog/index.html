@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Aqui van los Metadatos (Datos que no se muestran en Pantalla)-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Descripcion de nuestra Pagina Web">
+    <title>Mis Perris</title>
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="icon" href="{% static 'img/doushouqi-dog.png' %}"/>
+    <link rel="stylesheet" href="{% static 'style/fontello.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style/carrusel.css' %}">
+    <link rel="stylesheet" href="{% static 'style/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'style/banner.css' %}">
+    <link rel="stylesheet" href="{% static 'style/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'style/info.css' %}">
+    <link rel="stylesheet" href="{% static 'style/formulario_p.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome|typicons">
+    
+</head>
+<body>
+    <header>
+        
+        <div class="contenedor">
+            <article class="titulo"><a href="{% url 'index' %}"><h1 class="icon-guidedog"> Mis Perris 
+            </h1></a></article>
+            <input type="checkbox" id="menu-bar"> 
+            <label class="icon-list" for="menu-bar"> </label>
+            <nav class="menu">
+                <a href="{% url 'index' %}">Inicio</a>
+                <a href="{% url 'galeria' %}">Inscripción</a>
+                <a href="">Blog</a>
+                <a href="">Contacto</a>
+            </nav>
+
+        </div>
+            
+    </header>
+
+    <main>
+        <section id="banner">
+            <div class="contenedor">
+            <div class="container">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ol>
+                  
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                  
+                        <div class="item active">
+                          <img src="{% static 'img/Perro_Carrusel1.jpg' %}" alt="Perro reubicado numero 1">
+                          <div class="carousel-caption">
+                            <h2>Cachupin</h2>
+                            <p><b>Fue lo mejor que nos puedo haber pasado!!</b></p>
+                          </div>
+                        </div>
+                  
+                        <div class="item">
+                          <img src="{% static 'img/Perro_Carrusel2.jpg' %}" alt="Perro reubicado numero 2">
+                          <div class="carousel-caption">
+                            <h2>Jack</h2>
+                            <p><b>Este perrito en verdad nos cambio la vida</b></p>
+                          </div>
+                        </div>
+                      
+                        <div class="item">
+                          <img src="{% static 'img/Perro_Carrusel3.jpg' %}" alt="Perro reubicado numero 3">
+                          <div class="carousel-caption">
+                            <h2>zeth</h2>
+                            <p><b>Nunca habia adoptado pero tener</b></p>
+                            <p><b>compañero como este es hermoso</b></p>
+                          </div>
+                        </div>
+                    
+                      </div>
+                  
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                  
+        </section>
+
+        <section id="Bienvenidos">
+            <div class="contenedor">
+                    <h2>Fundación Mis Perris</h2>
+                    <p>En la Región Metropolitana, hay más de doscientos mil perros que no tienen hogar ni dueño. Miles de ellos nacieron en las calles, otros que fueron abandonados por ser demasiado grandes, viejos o simplemente porque ya no son un simpático cachorro. Un animal abandonado esta condenado a sufrir hambre, enfermedades, accidentes y la crueldad de la gente. Muchos refugios y perreras, trabajan sin descanso para cambiar esta realidad, pero nunca es suficiente. Por eso surgió Adopción <b>Mis Perris®</b>. JUNTOS podemos hacer que esta historia sea diferente.</p>
+            </div>
+            
+        </section>
+        
+        <section id="blog">
+                <div class="titulo_blog"><h2>Mantente informado con lo último</h2></div>
+            <div class="contenedor">
+                <article>
+                    <img src="{% static 'img/husky-dog-forest-heterochromia-pets-siberian-husky.jpg' %}" alt="Husky dog"  >
+                    <h4>Escoge tu compañero ideal</h4>
+                </article>
+                <article>
+                    <img src="{% static 'img/Dog-face-close-up-white-and-black_1920x1080.jpg' %}" alt="Dog face">
+                    <h4>Todos ellos merecen amor</h4>
+                    
+                </article>
+                <article>
+                    <img src="{% static 'img/275514.jpg' %}" alt="Dog image">
+                    <h4>Ellos te haran feliz</h4>
+                </article>
+            </div>
+        </section>
+
+        <section id="info">
+
+            
+            <h2 class="titulo_info">Para muchos de nosotros las mascotas no son simples compañeros, son familia</h2>
+            
+            <div class="contenedor">
+                <div class="info-pet">
+                    <img src="{% static 'img/footer1.jpg' %}" alt="Perro para adopcion 1">
+                    <h4>Jack</h4>
+                    <p>Mientras es un cachorro, este men usualmente muestra una hiperactividad mucho mas alta que otros cachorros. De esta forma, es importante para la nueva familia el estar preparados para ello y contar con tiempo para jugar con el. Este cachorro necesitará mucha de tu atención pero seguramente recompensará tus esfuerzos con mucho amor y ternura.</p>
+                </div>
+                <div class="info-pet">
+                    <img src="{% static 'img/footer2.jpg' %}" alt="Perro para adopcion 2">
+                    <h4>Aika</h4>
+                    <p>En general, los Pastores Alemanes muestran una apariencia física muy ágil, atlética y despierta. Esta raza se caracteriza por una estructura muscular notable y una apariencia general de fuerza, agilidad y vivacidad. De acuerdo a los estándares, los Pastores Alemanes machos miden entre 24 pulgadas y 26 pulgadas de altura mientras los Pastores Alemanes hembra miden entre 22 y 24 pulgadas.</p>
+                </div>
+                <div class="info-pet">
+                    <img src="{% static 'img/footer3.jpg' %}" alt="Perro para adopcion 3">
+                    <h4>Coshino</h4>
+                    <p>Esta raza de perro es conocida por ser muy amigable, dócil, y leal. Usualmente no son agresivos y tienden a tener un muy buen temperamento. Este perro se puede adaptar a diferentes ambientes y puede vivir en una casa al igual que en un apartamento dado que no es una raza muy energética.</p>
+                </div>
+                <div class="info-pet">
+                    <img src="{% static 'img/images.jpg' %}" alt="Perro para adopcion 4">
+                    <h4>Wolf</h4>
+                    <p>En general,se caracteriza por ser muy jugueton y activo. Esta raza de perro necesita ejercitarse diariamente y tanto como sea posible, y también necesitan poder tener acceso a un área donde puedan correr y jugar tan a menudo como sea posible. Además de esto, los dálmatas también se caracterizan por ser muy amigables y afectuosos al igual que extremadamente sociable en la mayoría de los casos.</p>
+                </div>
+
+            </div>
+        </section>
+     
+    </main>
+    <footer>
+
+        <div class="contenedor">
+            <table> 
+                    
+                <article class="sociales">
+                
+
+                <a class="icon-facebook-squared"href="https://www.facebook.com/"></a>
+                <a class="icon-twitter-1" href="https://twitter.com/?lang=es"></a>
+                <a class="icon-instagram" href="https://www.instagram.com/?hl=es-la"></a>
+                <a class="icon-googleplus-rect" href="https://plus.google.com/discover?hl=es"></a>
+                    
+                </article>
+            
+                <div>
+                        <tr>
+                            <td>Teléfono Contacto:</td>
+                             <td>
+            
+                                <!-- Hipervínculo con llamada -->
+                                <a href="tel:+56988888888">
+                                    +56 9 8 888 88 88
+                                </a>
+            
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td>Mail:</td>
+                            <td>
+            
+                                <a href="mailto:Alexis@alumnos.duoc.cl">
+                                    Alexis@alumnos.duoc.cl
+                                </a>
+            
+                            </td>
+                        </tr>
+                </div>
+                <p class="copy">Mis perris &copy; 2018</p>
+                
+            </table>
+        
+            
+               
+        </div>
+           
+    </footer>
+    <script src="/static/js/formulario.js"></script>
+</body>    
+</html>
